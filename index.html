@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Journey Visualizer</title>
+    <style>
+      :root {
+        --bg-app: #0f172a;
+        --bg-card: #1e293b;
+        --bg-card-highlight: #334155;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --accent-primary: #10b981; /* Emerald */
+        --accent-secondary: #8b5cf6; /* Violet */
+        --accent-tertiary: #f59e0b; /* Amber */
+        --danger: #ef4444;
+      }
+      
+      * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--bg-app);
+        color: var(--text-primary);
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+
+      /* Scrollbar hiding for that native feel */
+      ::-webkit-scrollbar { width: 0px; background: transparent; }
+      
+      /* Animation classes */
+      .fade-in { animation: fadeIn 0.3s ease-out; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      
+      input, select, textarea {
+        font-family: inherit;
+        outline: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
